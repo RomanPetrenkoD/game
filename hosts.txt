@@ -1,32 +1,5 @@
 
 
-[jenkins_server]
-jenkins_host ansible_host=82.118.17.249 
-
-[jenkins_server:vars]
-ansible_user=root
-ansible_ssh_private_key_file=/home/ubuntu1-1804/.ssh/jenkins.weliosoftware.com
-
-
-[dev_server]
-dev_host ansible_host=82.118.17.246 owner=roman
-
-[dev_server:vars]
-ansible_user=root
-ansible_ssh_private_key_file=/home/ubuntu1-1804/.ssh/dev.weliosoftware.com
-
-[prod_server]
-prod_host ansible_host=82.118.17.245
-
-[prod_server:vars]
-ansible_user=root
-ansible_ssh_private_key_file=/home/ubuntu1-1804/.ssh/prod.weliosoftware.com
-
-[all_servers:children]
-jenkins_server
-dev_server
-prod_server
-
 [dev_user]
 ansible_user ansible_host=82.118.17.246
 
