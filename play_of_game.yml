@@ -1,0 +1,12 @@
+---
+- name: install java on the host
+  hosts: dev_host
+  become: yes
+
+
+  roles:
+          - game_of_java
+          - game_of_maven
+          - game_of_git
+          - game_of_deploy
+              

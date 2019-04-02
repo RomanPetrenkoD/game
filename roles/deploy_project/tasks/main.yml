@@ -1,0 +1,10 @@
+---
+# tasks file for deploy_project
+- name: install web server
+  yum: name=httpd state=latest
+- name: copy page to server
+  copy: src={{}}/index.html dest={{destin_file}} mode=0555
+  notify: Restart Apache
+- name: start webserver and enable it on boot
+  service: name=httpd state=started enabled=yes
+

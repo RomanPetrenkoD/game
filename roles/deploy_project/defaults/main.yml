@@ -1,0 +1,4 @@
+---
+# defaults file for deploy_project
+destin_file: /var/www/html
+

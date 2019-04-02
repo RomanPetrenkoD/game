@@ -1,0 +1,5 @@
+---
+#JDK version options include:
+# - java-1.8.0-opetjdk
+__java_packages:
+        - java-1.8.0-openjdk-devel

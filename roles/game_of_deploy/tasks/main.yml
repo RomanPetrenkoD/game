@@ -1,0 +1,16 @@
+---
+# tasks file for game_of_deploy
+
+#Clone repository to particular directory
+- name: Cloning repository
+  git:
+          repo: '{{repository}}'
+          dest: /opt/{{project_name}}
+          force: yes
+
+#Build the project
+- name: Build the project
+  shell:
+         cd /opt/{{project_name}} && mvn install && cd gameoflife-web && mvn jetty:run && echo "Server started"
+
+

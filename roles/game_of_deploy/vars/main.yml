@@ -1,0 +1,6 @@
+---
+# vars file for game_of_deploy
+
+#Clone git repository
+project_name: "game_of_life"
+repository: https://github.com/RomanPetrenkoD/game-of-life.git
